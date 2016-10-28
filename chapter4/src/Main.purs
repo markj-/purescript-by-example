@@ -34,3 +34,8 @@ factors' n = do
   guard $ i * j == n
   pure [i, j]
 
+isPrime :: Int -> Boolean
+isPrime n =
+  if n > 1
+    then length (factors n) == 1
+    else false
