@@ -39,3 +39,9 @@ isPrime n =
   if n > 1
     then length (factors n) == 1
     else false
+
+cartesian :: Array Int -> Array Int -> Array (Array Int)
+cartesian xs ys = do
+  i <- xs
+  j <- ys
+  pure [i, j]
