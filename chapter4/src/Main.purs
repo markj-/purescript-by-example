@@ -1,6 +1,7 @@
 module Main where
 
 import Prelude
+import Data.Array (filter)
 
 isEven :: Int -> Boolean
 isEven x =
@@ -12,3 +13,6 @@ isEven x =
 
 square :: Array Int -> Array Int
 square = map (\n -> n * n)
+
+filterNegative :: Array Int -> Array Int
+filterNegative = filter (\n -> n >= 0)
