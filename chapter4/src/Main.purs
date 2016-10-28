@@ -9,3 +9,6 @@ isEven x =
     else if x == 0
       then true
       else isEven (x - 2)
+
+square :: Array Int -> Array Int
+square = map (\n -> n * n)
