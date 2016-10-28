@@ -1,0 +1,24 @@
+{
+  "name": "chapter4",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-console": "^2.0.0",
+    "purescript-maybe": "^2.0.1",
+    "purescript-arrays": "^3.0.0",
+    "purescript-strings": "^2.0.2",
+    "purescript-foldable-traversable": "^2.0.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^1.0.0"
+  },
+  "resolutions": {
+    "purescript-console": "^2.0.0",
+    "purescript-eff": "^2.0.0",
+    "purescript-prelude": "^2.1.0"
+  }
+}
