@@ -1,7 +1,8 @@
 module Main where
 
 import Prelude
-import Data.Array (filter)
+import Data.Array (filter, concatMap, (..))
+import Data.Foldable (product)
 
 infix 8 filter as <$?>
 
@@ -21,3 +22,6 @@ filterNegative = filter (\n -> n >= 0)
 
 filterNegativeInfix :: Array Int -> Array Int
 filterNegativeInfix xs = (\n -> n >= 0) <$?> xs
+
+pairs n = concatMap (\i -> map (\j -> [i, j]) (i .. n)) (1 .. n)
+factors n = filter (\pair -> product pair == n) (pairs n)
