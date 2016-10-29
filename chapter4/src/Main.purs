@@ -45,3 +45,12 @@ cartesian xs ys = do
   i <- xs
   j <- ys
   pure [i, j]
+
+triples :: Int -> Array (Array Int)
+triples n = do
+  let x = n - 1
+  a <- 1 .. x
+  b <- 1 .. x
+  c <- 1 .. x
+  guard $ (a * a) + (b * b) == (c * c)
+  pure [a, b, c]
