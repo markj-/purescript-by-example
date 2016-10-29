@@ -1,7 +1,7 @@
 module Main where
 
 import Prelude
-import Data.Array (filter, concatMap, (..), length)
+import Data.Array (filter, concatMap, (..), length, (:))
 import Data.Foldable (product, foldl)
 import Control.MonadZero (guard)
 
@@ -63,6 +63,6 @@ allTrue = foldl (==) true
 
 
 reverse :: forall a. Array a -> Array a
-reverse = foldl (\xs x -> [x] <> xs) []
+reverse = foldl (\xs x -> x : xs) []
 
 
