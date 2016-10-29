@@ -1,7 +1,7 @@
 module Main where
 
 import Prelude
-import Data.Array (filter, concatMap, (..))
+import Data.Array (filter, concatMap, (..), length)
 import Data.Foldable (product)
 import Control.MonadZero (guard)
 
