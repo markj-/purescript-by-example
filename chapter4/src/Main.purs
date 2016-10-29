@@ -64,5 +64,3 @@ allTrue = foldl (==) true
 
 reverse :: forall a. Array a -> Array a
 reverse = foldl (\xs x -> x : xs) []
-
-
