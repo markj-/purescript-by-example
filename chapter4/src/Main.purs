@@ -24,7 +24,10 @@ filterNegative = filter (\n -> n >= 0)
 filterNegativeInfix :: Array Int -> Array Int
 filterNegativeInfix xs = (\n -> n >= 0) <$?> xs
 
+pairs :: Int -> Array (Array Int)
 pairs n = concatMap (\i -> map (\j -> [i, j]) (i .. n)) (1 .. n)
+
+factors :: Int -> Array (Array Int)
 factors n = filter (\pair -> product pair == n) (pairs n)
 
 factors' :: Int -> Array (Array Int)
