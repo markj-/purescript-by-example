@@ -59,4 +59,7 @@ triples n = do
   pure [a, b, c]
 
 allTrue :: Array Boolean -> Boolean
-allTrue = foldl (\acc n -> acc && n) true
+allTrue = foldl (==) true
+
+
+
