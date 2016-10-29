@@ -2,7 +2,7 @@ module Main where
 
 import Prelude
 import Data.Array (filter, concatMap, (..), length)
-import Data.Foldable (product)
+import Data.Foldable (product, foldl)
 import Control.MonadZero (guard)
 
 infix 8 filter as <$?>
@@ -57,3 +57,6 @@ triples n = do
   c <- 1 .. x
   guard $ (a * a) + (b * b) == (c * c)
   pure [a, b, c]
+
+allTrue :: Array Boolean -> Boolean
+allTrue = foldl (\acc n -> acc && n) true
