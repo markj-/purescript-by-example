@@ -12,3 +12,7 @@ type Person = { name :: String, address :: Address }
 
 sameCity :: Person -> Person -> Boolean
 sameCity { address: { city: x } } { address: { city: y } } = x == y
+
+fromSingleton :: forall a. a -> Array a -> a
+fromSingleton def [x] = x
+fromSingleton def _ = def
