@@ -2,6 +2,7 @@ module Main where
 
 import Prelude
 import Data.Picture
+import Data.Maybe
 
 factorial :: Int -> Int
 factorial 0 = 1
@@ -26,3 +27,8 @@ origin = Point { x, y }
 
 circleRadiusTen :: Shape
 circleRadiusTen = Circle origin 10.0
+
+extractShapeText :: Shape -> Maybe String
+extractShapeText (Text _ text) = Just text
+extractShapeText _ = Nothing
+
